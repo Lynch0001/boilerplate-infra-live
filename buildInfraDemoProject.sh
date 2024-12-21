@@ -14,7 +14,7 @@ ARGOCD_DEMO_BASE_PATH="boilerplate-infra-live/prod/us-east-1/ir/downstream/argoc
 
 # Verify build_infra_vars.yaml project input matches command line project input
 
-sed -i 's/Project: .*/Project: '$TARGET_PROJECT'/g' boilerplate-infra-live/build_infra_vars.yml
+sed -i 's/Project: .*/Project: '"$TARGET_PROJECT"'/g'  boilerplate-infra-live/build_infra_vars.yml
 
 #
 # create project folder
