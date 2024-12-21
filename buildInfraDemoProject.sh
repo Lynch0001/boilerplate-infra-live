@@ -41,7 +41,7 @@ mkdir $DEMO_BASE_PATH/$TARGET_PROJECT
 #
 cp $DEMO_BASE_PATH/project/alpha/terragrunt.hcl $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/project/alpha-template --output-folder $DEMO_BASE_PATH/project/$TARGET_PROJECT --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/project/alpha-template --output-folder $DEMO_BASE_PATH/project/$TARGET_PROJECT --non-interactive
 rm $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
 
 #
@@ -50,7 +50,7 @@ rm $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
 SERVICE="zookeeper"
 cp $DEMO_BASE_PATH/alpha/$SERVICE/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
@@ -59,7 +59,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 SERVICE="kafka"
 cp $DEMO_BASE_PATH/alpha/$SERVICE/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
@@ -72,9 +72,9 @@ cp $DEMO_BASE_PATH/alpha/$SERVICE/artemis-broker/terragrunt.hcl $DEMO_BASE_PATH/
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-namespace/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-acceptor-secret/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-broker/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-namespace --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/artemis-namespace --non-interactive
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-acceptor-secret --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/artemis-acceptor-secret --non-interactive
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-broker --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/artemis-broker --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-namespace --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/artemis-namespace --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-acceptor-secret --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/artemis-acceptor-secret --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-broker --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/artemis-broker --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-namespace/terragrunt.hcl
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-acceptor-secret/terragrunt.hcl
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/artemis-broker/terragrunt.hcl
@@ -86,7 +86,7 @@ SERVICE="ibmmq"
 # Namespace
 cp $DEMO_BASE_PATH/alpha/$SERVICE/namespace/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/namespace/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/namespace/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE/namespace --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/namespace --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE/namespace --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/namespace --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/namespace/terragrunt.hcl
 
 # Queue Managers
@@ -97,8 +97,8 @@ sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/queue-
 #
 # extra values editting
 #
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/queue-managers/$QUEUE_MANAGER --non-interactive
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER/values --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/queue-managers/$QUEUE_MANAGER/values --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/queue-managers/$QUEUE_MANAGER --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER/values --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/queue-managers/$QUEUE_MANAGER/values --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER/terragrunt.hcl
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER/values/extra.yaml
 
@@ -109,7 +109,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE/queue-managers/$QUEUE_MANAGER/values/
 SERVICE="networking"
 cp $DEMO_BASE_PATH/alpha/$SERVICE/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
@@ -118,7 +118,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 SERVICE="keda-artemis-secret"
 cp $DEMO_BASE_PATH/alpha/$SERVICE/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
 mkdir $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/secret
 cp $DEMO_BASE_PATH/alpha/$SERVICE/secret/secrets.yaml $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE/secret/secrets.yaml
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
@@ -136,7 +136,7 @@ mkdir $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE
 SERVICE_SUB="console"
 cp $DEMO_BASE_PATH/alpha/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 
 #
@@ -145,7 +145,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 SERVICE_SUB="oti"
 cp $DEMO_BASE_PATH/alpha/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 
 #
@@ -162,7 +162,7 @@ mkdir $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE
 SERVICE_SUB="s1"
 cp $DEMO_BASE_PATH/alpha/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 
 #
@@ -171,7 +171,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 SERVICE_SUB="s2"
 cp $DEMO_BASE_PATH/alpha/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 
 #
@@ -180,7 +180,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 SERVICE_SUB="s3"
 cp $DEMO_BASE_PATH/alpha/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 
 #
@@ -189,7 +189,7 @@ rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 SERVICE_SUB="s4"
 cp $DEMO_BASE_PATH/alpha/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url ./$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE_MAIN/$SERVICE_SUB --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragrunt.hcl
 
 #
