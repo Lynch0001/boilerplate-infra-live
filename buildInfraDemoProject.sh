@@ -6,7 +6,9 @@
 #
 # execution command: ./build_infra.sh new_project
 #
-echo "started infra-live build"
+/bin/sh echo "started infra-live build"
+export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+
 TARGET_PROJECT=$1
 BOILERPLATE_PATH="/media/psf/workspace"
 BOILERPLATE_BINARY="boilerplate_linux_a#rm64"
@@ -33,7 +35,7 @@ $BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_in
 SERVICE="zookeeper"
 cp $DEMO_BASE_PATH/alpha/$SERVICE/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file /media/psf/workspace/boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
 #rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
