@@ -10,7 +10,7 @@
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 
 TARGET_PROJECT=$1
-BOILERPLATE_PATH="/home/workspace/app"
+BOILERPLATE_PATH="/Users/timothylynch/workspace/app"
 BOILERPLATE_BINARY="boilerplate_linux_amd64"
 DEMO_BASE_PATH="boilerplate-infra-live/prod/us-east-1/xib/xib-demo"
 ARGOCD_DEMO_BASE_PATH="boilerplate-infra-live/prod/us-east-1/ir/downstream/argocd/xib/xib-demo"
@@ -26,7 +26,7 @@ mkdir $DEMO_BASE_PATH/$TARGET_PROJECT
 #
 cp $DEMO_BASE_PATH/project/alpha/terragrunt.hcl $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file /media/psf/workspace/app/build_infra_vars.yml --template-url $DEMO_BASE_PATH/project/alpha-template --output-folder $DEMO_BASE_PATH/project/$TARGET_PROJECT --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/project/alpha-template --output-folder $DEMO_BASE_PATH/project/$TARGET_PROJECT --non-interactive
 rm $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
 
 #
@@ -35,7 +35,7 @@ rm $DEMO_BASE_PATH/project/alpha-template/terragrunt.hcl
 SERVICE="zookeeper"
 cp $DEMO_BASE_PATH/alpha/$SERVICE/terragrunt.hcl $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 sed -i 's/alpha/{{ .Project }}/g' $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file /media/psf/workspace/app/boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file boilerplate-infra-live/build_infra_vars.yml --template-url $DEMO_BASE_PATH/alpha-template/$SERVICE --output-folder $DEMO_BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
 rm $DEMO_BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
