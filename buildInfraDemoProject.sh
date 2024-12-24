@@ -10,7 +10,7 @@
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 
 TARGET_PROJECT=$1
-BOILERPLATE_PATH="/media/psf/workspace/app"
+BOILERPLATE_PATH="/home/workspace/app"
 BOILERPLATE_BINARY="boilerplate_linux_amd64"
 DEMO_BASE_PATH="boilerplate-infra-live/prod/us-east-1/xib/xib-demo"
 ARGOCD_DEMO_BASE_PATH="boilerplate-infra-live/prod/us-east-1/ir/downstream/argocd/xib/xib-demo"
