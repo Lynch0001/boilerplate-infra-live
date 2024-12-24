@@ -187,148 +187,148 @@ rm $ROOT_PATH/$DEMO_BASE_PATH/alpha-template/$SERVICE_MAIN/$SERVICE_SUB/terragru
 #
 SERVICE="archiver"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Console
 #
 SERVICE="console"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Datastore
 #
 SERVICE="datastore"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Deliver
 #
 SERVICE="deliver"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Inbound
 #
 SERVICE="inbound"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Client
 #
 SERVICE="client"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Ingester
 #
 SERVICE="ingester"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # parser
 #
 SERVICE="parser"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # preparser
 #
 SERVICE="preparser"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 #
 # resubmit
 #
 SERVICE="resubmit"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # router
 #
 SERVICE="router"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # twinning
 #
 SERVICE="twinning"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # OTI
 #
 SERVICE="oti"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # OTI-API
 #
 SERVICE="oti-api"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 #
 # Twingate
 #
 SERVICE="twingate"
 BASE_PATH=$ARGOCD_DEMO_BASE_PATH
-cp $BASE_PATH/alpha/$SERVICE/terragrunt.hcl $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-sed -i '' 's/alpha/{{ .Project }}/g' $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
-$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $BASE_PATH/alpha-template/$SERVICE --output-folder $BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
-rm $BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+cp $ROOT_PATH/$BASE_PATH/alpha/$SERVICE/terragrunt.hcl $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+sed -i '' 's/alpha/{{ .Project }}/g' $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
+$BOILERPLATE_PATH/$BOILERPLATE_BINARY --var-file $ROOT_PATH/build_infra_vars.yml --template-url $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE --output-folder $ROOT_PATH/$BASE_PATH/$TARGET_PROJECT/$SERVICE --non-interactive
+rm $ROOT_PATH/$BASE_PATH/alpha-template/$SERVICE/terragrunt.hcl
 
 sed -i '' 's/Project: .*/Project: placeholder/g' $ROOT_PATH/build_infra_vars.yml
