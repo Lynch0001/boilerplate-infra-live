@@ -1,8 +1,0 @@
-#
-# Deliver boilerplate file
-#
-
-variables:
-  - name: Project
-    description: The project name to create
-    type: string
