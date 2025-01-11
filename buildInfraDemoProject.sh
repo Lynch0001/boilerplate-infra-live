@@ -10,11 +10,11 @@
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 
 TARGET_PROJECT=$1
-BOILERPLATE_PATH="/Users/timothylynch/workspace/app"
+BOILERPLATE_PATH="/app"
 BOILERPLATE_BINARY="boilerplate_darwin_amd64"
 DEMO_BASE_PATH="prod/us-east-1/xib/xib-demo"
 ARGOCD_DEMO_BASE_PATH="prod/us-east-1/ir/downstream/argocd/xib/xib-demo"
-ROOT_PATH="/Users/timothylynch/workspace/app/boilerplate-infra-live"
+ROOT_PATH="/app/boilerplate-infra-live"
 
 # Verify build_infra_vars.yaml project input matches command line project input
 
